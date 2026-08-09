@@ -19,7 +19,7 @@ For this demonstration, I'll use a simple profile based on Davo's guide.
 
 There are 3 stages where Lidarr scores a release:
 
-## 1 - The announce name
+### 1 - The announce name
 
 It can be from the RSS feeds, an automatic or a manual search.
 
@@ -29,7 +29,7 @@ Here is a search result:
 
 Let's say only MP3 releases are available at the moment, so this one is grabbed (automatically with the announce or by search).
 
-## 2 - The torrent folders and files names
+### 2 - The torrent folders and files names
 
 Once grabbed, the torrent will appear on your Activity page.
 
@@ -41,7 +41,7 @@ And when importing the complete torrent, the tracks are scored too, but only usi
 
 ![Screenshot 4](https://i.ibb.co/jkLj4dyX/Screenshot-2026-07-11-204951.png)
 
-## 3 - The imported and renamed files
+### 3 - The imported and renamed files
 
 It's the most important part to avoid duplicate downloads. And with this quality profile and naming convention, nothing is scored here.
 
@@ -61,7 +61,7 @@ Only once a FLAC version has been imported, and the cutoff is met, will the mult
 -  I'm using Jellyfin as a media player. The naming convention I propose can and should be adapted to your preferences and your media player. Take time to test each part jumping from Lidarr to your refreshed library.
 -  My quality goal is FLAC 16bit coming from digital sources, so the custom formats and scoring used in this guide should be adapted to your liking.*
 
-## Naming convention
+### Naming convention
 
 My settings for the naming:
 
@@ -80,9 +80,9 @@ About the Track Format:
 - The naming I suggest for the tracks folder contains the year and clean title of the release group, its disambiguation if specified, and its format and MBID. Adapt to your preferences, but I think it's the better way to keep clarity and avoid issues with identically named album/single/EP released the same year. The disambiguation is really optional, rarely used. On the contrary the MBID is the most important part for this purpose.
 - Once again, you can adapt my suggestion for the track naming to your preferences, but please note that the name of each track **MUST** contain the **{Medium Format}** and **{Quality Title}** tokens, as it will allow Lidarr to correctly score the release once imported. You can take examples on [those conventions](https://wiki.servarr.com/lidarr/naming-guide#community-naming-conventions), but none of them use the **{Medium Format}** token in the track name, only on the subfolder.
 
-## Custom formats
+### Custom formats
 
-### FLAC
+#### FLAC
 
 This one is for FLAC 16bit only, my quality goal in this guide.
 
@@ -109,7 +109,7 @@ This one is for FLAC 16bit only, my quality goal in this guide.
 
 </details>
 
-### Lossless
+#### Lossless
 
 This one is for all other lossless files, negated by the previous non-24bit FLAC regex.
 
@@ -145,7 +145,7 @@ This one is for all other lossless files, negated by the previous non-24bit FLAC
 
 </details>
 
-### MP3 TOP
+#### MP3 TOP
 
 This one is for MP3 320 and MP3 V0 (VBR).
 
@@ -172,7 +172,7 @@ This one is for MP3 320 and MP3 V0 (VBR).
 
 </details>
 
-### Lossy
+#### Lossy
 
 This one is for all other lossy files.
 
@@ -199,7 +199,7 @@ This one is for all other lossy files.
 
 </details>
 
-### CD
+#### CD
 
 <details>
 <summary>Custom Format JSON</summary>
@@ -224,7 +224,7 @@ This one is for all other lossy files.
 
 </details>
 
-### WEB
+#### WEB
 
 About this one: I've added to this regex the formats used by MusicBrainz for those releases. Some may be missing, tell me if you know some to add.
 
@@ -251,7 +251,7 @@ About this one: I've added to this regex the formats used by MusicBrainz for tho
 
 </details>
 
-### SACD
+#### SACD
 
 <details>
 <summary>Custom Format JSON</summary>
@@ -276,7 +276,7 @@ About this one: I've added to this regex the formats used by MusicBrainz for tho
 
 </details>
 
-### Cassette
+#### Cassette
 
 <details>
 <summary>Custom Format JSON</summary>
@@ -301,7 +301,7 @@ About this one: I've added to this regex the formats used by MusicBrainz for tho
 
 </details>
 
-### DAT
+#### DAT
 
 <details>
 <summary>Custom Format JSON</summary>
@@ -326,7 +326,7 @@ About this one: I've added to this regex the formats used by MusicBrainz for tho
 
 </details>
 
-### Vinyl
+#### Vinyl
 
 <details>
 <summary>Custom Format JSON</summary>
@@ -351,7 +351,7 @@ About this one: I've added to this regex the formats used by MusicBrainz for tho
 
 </details>
 
-### Soundboard
+#### Soundboard
 
 <details>
 <summary>Custom Format JSON</summary>
@@ -376,7 +376,7 @@ About this one: I've added to this regex the formats used by MusicBrainz for tho
 
 </details>
 
-### 100%
+#### 100%
 
 This one is for the Perfect FLAC with a 100% score (so only for CD edition). It can only count in the score while in the search stage, as the torrent's folders and files are not tagged with it.
 
@@ -412,7 +412,7 @@ This one is for the Perfect FLAC with a 100% score (so only for CD edition). It 
 
 </details>
 
-## Quality profile
+### Quality profile
 
 First, do not forget to edit the **Quality groups**:
 
@@ -444,7 +444,7 @@ When you'll search a release, the maximum score you'll have with these setings s
 
 Once grabbed, the maximum score can only be 175 points. Setting a cutoff score to 175 will prevent Lidarr from downloading multiple 100% sources.
 
-## Delay profile
+### Delay profile
 
 In my scenario, another cause of duplicate downloads is when a 24bit version is announced before the 16bit version. Just add a **Delay profile**, with the timing you prefer, and enable **Bypass if Highest Quality**.
 
