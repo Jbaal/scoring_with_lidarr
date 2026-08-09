@@ -472,7 +472,7 @@ Nope, this has to be done manually or by using multiple instances of Lidarr.
 
 ***Can I force an edition to be chosen***
 
-Nope, if you force an edition by disabling the [b]Automatically Switch Release** in the release **Edit** modal, it will only prevent Lidarr from importing any edition other than the one you selected, but it will still grab other editions as Lidarr can't analyze a torrent before downloading it.
+Nope, if you force an edition by disabling the **Automatically Switch Release** in the release **Edit** modal, it will only prevent Lidarr from importing any edition other than the one you selected, but it will still grab other editions as Lidarr can't analyze a torrent before downloading it.
 
 ***I chose the WEB version of an album but Lidarr import it as a Vinyl***
 
