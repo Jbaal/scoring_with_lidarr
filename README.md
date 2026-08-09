@@ -56,10 +56,10 @@ So if a new MP3 torrent is announced on a tracker, it will be automatically down
 Only once a FLAC version has been imported, and the cutoff is met, will the multiple auto-downloads finally stop.
 
 ## How to do better
-***Please note the following:**
--  I don't use hardlinks, as I let Lidarr keep the metadata in sync with MusicBrainz. Hardlinks can help a lot with space, you're encouraged to use it. Just remember: **DO NOT** use hardlinks AND change the metadata!
--  I'm using Jellyfin as a media player. The naming convention I propose can and should be adapted to your preferences and your media player. Take time to test each part jumping from Lidarr to your refreshed library.
--  My quality goal is FLAC 16bit coming from digital sources, so the custom formats and scoring used in this guide should be adapted to your liking.*
+***Please note the following:***
+-  *I don't use hardlinks, as I let Lidarr keep the metadata in sync with MusicBrainz. Hardlinks can help a lot with space, you're encouraged to use it. Just remember: **DO NOT** use hardlinks AND change the metadata!*
+-  *I'm using Jellyfin as a media player. The naming convention I propose can and should be adapted to your preferences and your media player. Take time to test each part jumping from Lidarr to your refreshed library.*
+-  *My quality goal is FLAC 16bit coming from digital sources, so the custom formats and scoring used in this guide should be adapted to your liking.*
 
 ### Naming convention
 
